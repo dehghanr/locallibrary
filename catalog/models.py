@@ -16,8 +16,6 @@ class Genre(models.Model):
         return self.name
 
 
-
-
 class Book(models.Model):
     """
     Model representing a book (but not a specific copy of a book).
@@ -45,8 +43,6 @@ class Book(models.Model):
         Returns the url to access a particular book instance.
         """
         return reverse('book-detail', args=[str(self.id)])
-
-
 
 
 class BookInstance(models.Model):
